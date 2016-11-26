@@ -1,0 +1,23 @@
+<div class="container" >
+  <div class="text-center" ng-hide="myInfoCtrl.isLogin">
+    <h1>
+       Not Signed Up Yet. <a ui-sref="public.login"> Sign up Now!</a>
+    </h1>
+  </div>
+
+  <div class="menu-item-tile col-md-6" ng-show="myInfoCtrl.isLogin" >
+    <div class="row">
+      <div class="col-sm-5">
+        <div class="menu-item-photo">
+          <div>{{myInfoCtrl.menuItem.short_name}} </div>
+          <img class="img-responsive" width="250" height="150" ng-src="{{myInfoCtrl.basePath}}/images/{{myInfoCtrl.menuItem.short_name}}.jpg" alt="{{$myInfoCtrl.menuItem.name}}">
+        </div>
+      </div>
+      <div class="menu-item-description col-sm-7">
+        <h3 class="menu-item-title">{{myInfoCtrl.menuItem.name}}</h3>
+        <p class="menu-item-details">{{myInfoCtrl.menuItem.description}}</p>
+      </div>
+    </div>
+    <hr class="visible-xs">
+  </div>
+</div>
